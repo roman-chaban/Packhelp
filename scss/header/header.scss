@@ -1,0 +1,99 @@
+@use '../containers/mainContainer' as *;
+@use '../colors/colors.scss' as color;
+@use '../globals/globals.scss' as size;
+
+.header {
+  border-bottom: 1px solid color.$primary-input-border;
+  min-height: 70px;
+}
+
+.headerTopNav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 88px;
+  border-bottom: 1px solid color.$primary-input-border;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.navMenuListItem:not(:first-child) {
+  border-left: 1px solid color.$primary-input-border;
+}
+
+.navMenuListItem:last-child {
+  border-right: 1px solid color.$primary-input-border;
+}
+
+.navMenuListItem:first-child {
+  padding-left: 0;
+}
+
+.navMenuListItem {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 31px;
+}
+
+.headerTopNav .headerTopNavMenu {
+  display: flex;
+  align-items: center;
+}
+
+.headerContainer {
+  @include mainContainer;
+  padding: 20px 88px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.headerNav > .headerNavMenu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menuListItem > .menuListLink,
+.featuresSignIn {
+  font-size: size.$primary-link-size;
+  color: color.$primary-link-color;
+  line-height: 171%;
+}
+
+.featuresSignIn {
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.headerFeatures {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.walletIcon, .basketIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.headerFormInput {
+  width: 100%;
+  max-width: 259px;
+  height: 30px;
+  border: 1px solid color.$primary-input-border;
+  background: color.$primary-input-background;
+  padding: 10px;
+  color: color.$primary-link-color;
+  caret-color: color.$primary-link-color;
+}
+
+.featuresNavIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
