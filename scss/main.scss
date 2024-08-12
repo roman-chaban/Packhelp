@@ -1,6 +1,7 @@
-@use '../css/reset/reset.css';
-@use '../scss/fonts';
-@use '../scss/header/header.scss';
+@use '../scss/base/reset';
+@use '../scss/fonts/fonts';
+@use '../scss/layouts/header';
+@use '../scss/sections/hero';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -16,4 +17,3 @@ body {
   min-height: 100vh;
   flex: 1 1 auto;
 }
-

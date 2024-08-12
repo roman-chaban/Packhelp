@@ -1,6 +1,6 @@
-@use '../containers/mainContainer' as *;
-@use '../colors/colors.scss' as color;
-@use '../globals/globals.scss' as size;
+@use '../abstracts/mixins' as *;
+@use '../colors/colors' as color;
+@use '../abstracts/globals' as size;
 
 .header {
   border-bottom: 1px solid color.$primary-input-border;
@@ -76,7 +76,8 @@
   gap: 32px;
 }
 
-.walletIcon, .basketIcon {
+.walletIcon,
+.basketIcon {
   width: 24px;
   height: 24px;
 }

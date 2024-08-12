@@ -254,7 +254,8 @@ h6 {
   gap: 32px;
 }
 
-.walletIcon, .basketIcon {
+.walletIcon,
+.basketIcon {
   width: 24px;
   height: 24px;
 }
