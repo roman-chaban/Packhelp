@@ -1,0 +1,123 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.hero {
+  padding: 60px 40px;
+  padding-bottom: 0;
+  margin-bottom: 160px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.heroContainer {
+  display: flex;
+  background: color.$primary-input-background;
+  width: 100%;
+  max-width: 1120px;
+  min-height: 720px;
+  border-radius: 16px;
+}
+
+.mainBanner {
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+
+.heroInformationBlock {
+  position: relative;
+  width: 100%;
+  padding: 70px 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.heroTitlesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroTitle {
+  width: 100%;
+  max-width: 362px;
+  line-height: 120%;
+  font-size: size.$primary-main-size;
+  color: color.$primary-link-color;
+}
+
+.heroSubTitle {
+  width: 100%;
+  max-width: 391px;
+  line-height: 160%;
+  font-size: size.$primary-subMain-size;
+  color: color.$primary-link-color;
+}
+
+.heroButtonsBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.customizeButton {
+  @include basicButton(none, 100%, 253px, color.$primary-customize-color);
+  font-size: size.$primary-customize-size;
+  line-height: 139%;
+  color: color.$primary-natural-white;
+}
+
+.buyStockButton {
+  @include basicButton(
+    2px solid color.$primary-link-color,
+    100%,
+    308px,
+    transparent
+  );
+  line-height: 133%;
+  font-size: size.$primary-customize-size;
+  color: color.$primary-link-color;
+}
+
+.heroFeaturesList {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.subListBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.listItem {
+  line-height: 150%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-list-item-size;
+}
+
+.heroProducts {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productTitle {
+  line-height: 200%;
+  text-transform: uppercase;
+  color: color.$primary-link-color;
+  font-size: size.$primary-small-title-size;
+}
+
+.productsLogos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}

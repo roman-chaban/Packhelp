@@ -1,6 +1,14 @@
 @mixin mainContainer {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin basicButton($border, $width: 100%, $maxWidth, $background, $border-radius: 4px) {
+  border: $border;
+  width: $width;
+  max-width: $maxWidth;
+  background: $background;
+  border-radius: $border-radius;
+  padding: 16px 42px;
+}

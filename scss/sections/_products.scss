@@ -1,0 +1,128 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.products {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.productsContainer {
+  @include mainContainer;
+  max-width: 1440px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.primaryProductsFirst,
+.primaryProductsSecond {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.productsTitlesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-right: 32px;
+}
+
+.productsSubtitlesSecond {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+.productsTitlesBlockSecond {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.productsTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 125%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-products-size;
+}
+
+.productsTitleMark {
+  color: color.$primary-light-gray;
+}
+
+.productsSubtitles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainTitles {
+  display: flex;
+  align-items: center;
+}
+
+.primarySubtitle {
+  position: relative;
+  line-height: 160%;
+  font-size: size.$primary-subMain-size;
+  color: color.$primary-link-color;
+}
+
+.primarySubtitle:last-child::after {
+  position: absolute;
+  content: '.';
+  right: -20px;
+}
+
+.grayCircles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grayCircle {
+  border: 1.5px solid color.$primary-gray-circle;
+  border-radius: 200px;
+  width: 32px;
+  height: 32px;
+}
+
+.productsCards {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 88px;
+}
+
+.productCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardImageBlock {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 304px;
+  height: 424px;
+  background: color.$primary-hero-background;
+}
+
+.cardTitle {
+  line-height: 150%;
+  color: color.$primary-link-color;
+}
+
+.secondarySubTitle {
+  font-size: size.$primary-subMain-size;
+  line-height: 160%;
+}
