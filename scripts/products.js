@@ -8,7 +8,9 @@ const fetchingProductsTitles = async () => {
     const data = await request.json();
     return data;
   } catch (error) {
-    console.error(error.message);
+    if (error instanceof Error) {
+      console.log(error.message);
+    }
   }
 };
 

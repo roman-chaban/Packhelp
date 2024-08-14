@@ -7,7 +7,7 @@ const fetchHeaderLinks = async () => {
     return data;
   } catch (error) {
     if (error instanceof Error) {
-      console.error(error.message);
+      console.log(error.message);
     }
   } finally {
     console.log('Links is fetching');
