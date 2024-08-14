@@ -15,8 +15,8 @@
 .heroContainer {
   display: flex;
   background: color.$primary-input-background;
-  width: 100%;
-  max-width: 1120px;
+  @include mainContainer;
+  max-width: 1440px;
   min-height: 720px;
   border-radius: 16px;
 }

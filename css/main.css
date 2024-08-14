@@ -159,9 +159,9 @@ h6 {
 
 .headerTopNav {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 88px;
+  padding: 0 45px;
   border-bottom: 1px solid #e7e7e7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,13 +211,16 @@ h6 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 88px;
+  padding: 20px 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 32px;
 }
 
@@ -241,6 +244,13 @@ h6 {
 .featuresSignIn {
   padding-right: 4px;
   cursor: pointer;
+  width: 100%;
+  max-width: 55px;
+}
+
+.headerFeaturesForm {
+  width: 100%;
+  max-width: 279px;
 }
 
 .headerFeatures {
@@ -301,7 +311,9 @@ h6 {
   display: flex;
   background: #f5f5f5;
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1440px;
   min-height: 720px;
   border-radius: 16px;
 }
@@ -624,6 +636,77 @@ h6 {
 .secondarySubTitle {
   font-size: 20px;
   line-height: 160%;
+}
+
+.sustainability {
+  min-height: 100vh;
+}
+
+.sustainabilityContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.sustainabilityTitleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sustainabilityTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  line-height: 125%;
+  color: #2f2f2f;
+  font-size: 32px;
+}
+
+.sustainabilityMark {
+  color: #949494;
+}
+
+.sustainabilityItemsBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.itemBlock {
+  width: 100%;
+  border-radius: 16px;
+  max-width: 536px;
+  height: 592px;
+  background: #5f6455;
+}
+
+.light-bg {
+  background: #e7e1c3;
 }
 
 body {

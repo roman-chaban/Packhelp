@@ -1,0 +1,53 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.sustainability {
+  min-height: 100vh;
+}
+
+.sustainabilityContainer {
+  @include mainContainer;
+  max-width: 1440px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sustainabilityTitleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sustainabilityTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 125%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-products-size;
+}
+
+.sustainabilityMark {
+  color: color.$primary-light-gray;
+}
+
+.sustainabilityItemsBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.itemBlock {
+  width: 100%;
+  border-radius: 16px;
+  max-width: 536px;
+  height: 592px;
+  background: color.$primary-dark-green;
+}
+
+.light-bg {
+    background: color.$primary-light-yellow;
+}
