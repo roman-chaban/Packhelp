@@ -45,6 +45,7 @@
 
 .headerContainer {
   @include mainContainer;
+  max-width: 1440px;
   padding: 20px 45px;
   display: flex;
   align-items: center;

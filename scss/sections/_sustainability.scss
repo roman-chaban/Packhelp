@@ -3,7 +3,7 @@
 @use '../../scss/abstracts/mixins' as *;
 
 .sustainability {
-  min-height: 100vh;
+  margin-bottom: 120px;
 }
 
 .sustainabilityContainer {
@@ -41,6 +41,11 @@
 }
 
 .itemBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 40px 0 0 0;
   width: 100%;
   border-radius: 16px;
   max-width: 536px;
@@ -48,6 +53,71 @@
   background: color.$primary-dark-green;
 }
 
+.titlesItemsBlock {
+  position: relative;
+  padding-left: 40px;
+}
+
+.itemsList {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  bottom: -85px;
+}
+
+.item {
+  color: color.$primary-natural-white;
+  font-size: size.$primary-link-size;
+}
+
 .light-bg {
-    background: color.$primary-light-yellow;
+  background: color.$primary-light-yellow;
+  position: relative;
+}
+
+.primaryBannerImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.secondaryBannerImage {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  bottom: -45px;
+}
+
+.itemSubtitle {
+  line-height: 200%;
+  text-transform: uppercase;
+  font-size: size.$primary-small-title-size;
+  color: color.$primary-natural-white;
+}
+
+.secondarySubTitle,
+.secondaryTitleColor {
+  color: color.$primary-link-color !important;
+}
+
+.readMoreButton {
+  position: absolute;
+  bottom: -115px;
+  border: 2px solid color.$primary-link-color;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 118px;
+  line-height: 100%;
+  padding: 14px 18px;
+  color: color.$primary-link-color;
+  background: transparent;
+}
+
+.itemTitle {
+  width: 100%;
+  max-width: 350px;
+  line-height: 133%;
+  font-size: size.$primary-card-title;
+  color: color.$primary-natural-white;
 }
