@@ -4,7 +4,7 @@ const productCardsContainer = document.querySelector('.productsCards');
 
 const fetchingProductsTitles = async () => {
   try {
-    const request = await fetch('/json/products.json');
+    const request = await fetch('/data/products.json');
     const data = await request.json();
     return data;
   } catch (error) {
