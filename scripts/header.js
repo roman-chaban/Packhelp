@@ -2,7 +2,7 @@
 
 const fetchHeaderLinks = async () => {
   try {
-    const request = await fetch('/json/header.json');
+    const request = await fetch('/data/header.json');
     const data = await request.json();
     return data;
   } catch (error) {
