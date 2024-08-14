@@ -1,0 +1,70 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.packhelpDifference {
+  display: flex;
+  margin-bottom: 168px;
+}
+
+.packhelpDifferenceContainer {
+  @include mainContainer;
+  padding: 0 30px;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.differenceTitles {
+  width: 100%;
+}
+
+.differenceTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 125%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-products-size;
+}
+
+.differenceMark {
+  color: color.$primary-light-gray;
+}
+
+.differenceCards {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.differenceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px;
+  border: 1.5px solid color.$primary-input-border;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 368px;
+  height: 226px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.cardIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.cardSubtitle {
+  max-width: 230px;
+  line-height: 160%;
+  font-size: size.$primary-subMain-size;
+  color: color.$primary-link-color;
+}
+
+.grayMark {
+  color: color.$primary-light-gray;
+}
