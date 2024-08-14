@@ -9,6 +9,7 @@ const fetchHeaderLinks = async () => {
     if (error instanceof Error) {
       console.log(error.message);
     }
+    return [];
   } finally {
     console.log('Links is fetching');
   }
@@ -21,13 +22,10 @@ const setHeaderLinksByNavMenu = (data) => {
   }
 
   const menuItems = data
-    .map((link) => {
-      return `<li class='menuListItem'><a class="menuListLink" href="#!">
-        ${link.linkItem}
-      </a>
-      </li>
-      `;
-    })
+    .map(
+      (link) =>
+        `<li class='menuListItem'><a class="menuListLink" href="#!">${link.linkItem}</a></li>`
+    )
     .join('');
 
   const menu = document.createElement('ul');
