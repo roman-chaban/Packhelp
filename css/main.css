@@ -255,7 +255,6 @@ h6 {
 }
 
 .headerFeatures {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,6 +262,9 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .walletIcon,
@@ -322,6 +324,16 @@ h6 {
 .mainBanner {
   position: absolute;
   right: 0;
+  width: 100%;
+  max-width: 600px;
+}
+@media (max-width: 1000px) {
+  .mainBanner {
+    max-width: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    bottom: 40px;
+  }
 }
 
 .heroInformationBlock {
@@ -882,6 +894,203 @@ h6 {
 
 .grayMark {
   color: #949494;
+}
+
+.software {
+  margin-bottom: 160px;
+}
+
+.softwareContainer {
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+
+.softwareTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.softwareTitle {
+  line-height: 125%;
+  color: #2f2f2f;
+  font-size: 32px;
+}
+
+.titleSubMark {
+  line-height: 125%;
+  color: #949494;
+}
+
+.designSourceBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.designBlock {
+  padding: 40px 0 0 40px;
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
+  height: 426px;
+  background: #5f6455;
+}
+
+.sourceBlock {
+  padding: 40px 0 0 40px;
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
+  height: 426px;
+  background: #f9f5ed;
+}
+
+.designTitle {
+  font-size: 24px;
+  line-height: 133%;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.sourceTitle {
+  font-size: 24px;
+  line-height: 133%;
+  color: #2f2f2f;
+  padding-bottom: 1rem;
+}
+
+.designItems,
+.sourceItems {
+  width: 100%;
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.designItem,
+.sourceItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.designItem {
+  border-radius: 24px;
+  width: 100%;
+  max-width: 134px;
+  height: 40px;
+  background: #d0d4bd;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sourceItem {
+  border-radius: 24px;
+  width: 100%;
+  max-width: 134px;
+  height: 40px;
+  background: #e7e1c3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.designItemTitle,
+.sourceItemTitle {
+  line-height: 218%;
+  font-size: 11px;
+}
+
+.bigMaxWidth {
+  max-width: 213px;
+}
+
+.bixMaxWidthLarge {
+  max-width: 170px;
+}
+
+.maxWidthLargeSecondary {
+  max-width: 154px;
+}
+
+.softwareImageButtonSubBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#buttonAbsolute {
+  position: relative;
+  bottom: 40px;
+}
+
+.primaryButton {
+  width: 100%;
+  height: 49px;
+  border: 2px solid #fff;
+  max-width: 149px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.secondaryButton {
+  width: 100%;
+  height: 49px;
+  border: 2px solid #2f2f2f;
+  max-width: 171px;
+  color: #2f2f2f;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.blockImage {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {

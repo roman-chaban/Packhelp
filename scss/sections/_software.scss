@@ -1,0 +1,124 @@
+@use '../abstracts/globals' as size;
+@use '../colors/colors' as color;
+@use '../abstracts/mixins' as *;
+
+.software {
+  margin-bottom: 160px;
+}
+
+.softwareContainer {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.softwareTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.softwareTitle {
+  @include sectionTitle;
+}
+
+.titleSubMark {
+  @include sectionSubMark;
+}
+
+.designSourceBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.designBlock {
+  @include defaultBlock(color.$primary-dark-green);
+}
+
+.sourceBlock {
+  @include defaultBlock(color.$primary-light);
+}
+
+.designTitle {
+  @include blockTitle(color.$primary-natural-white);
+}
+
+.sourceTitle {
+  @include blockTitle(color.$primary-link-color);
+}
+
+.designItems,
+.sourceItems {
+  width: 100%;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.designItem,
+.sourceItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.designItem {
+  @include itemSmallContainer(color.$primary-list-container-bg);
+}
+
+.sourceItem {
+  @include itemSmallContainer(color.$primary-light-yellow);
+}
+
+.designItemTitle,
+.sourceItemTitle {
+  line-height: 218%;
+  font-size: size.$primary-item-small-title;
+}
+
+.bigMaxWidth {
+  max-width: 213px;
+}
+
+.bixMaxWidthLarge {
+  max-width: 170px;
+}
+
+.maxWidthLargeSecondary {
+  max-width: 154px;
+}
+
+.softwareImageButtonSubBlock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#buttonAbsolute {
+  position: relative;
+  bottom: 40px;
+}
+
+.primaryButton {
+  @include buttonAbsolute(
+    2px solid color.$primary-natural-white,
+    color.$primary-natural-white,
+    149px
+  );
+}
+
+.secondaryButton {
+  @include buttonAbsolute(
+    2px solid color.$primary-link-color,
+    color.$primary-link-color,
+    171px
+  );
+}
+
+.blockImage {
+  max-width: 100%;
+  object-fit: cover;
+}
