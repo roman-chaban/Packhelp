@@ -62,10 +62,35 @@
 
 @mixin buttonAbsolute($border, $color, $maxWidth) {
   width: 100%;
+  line-height: 100%;
   height: 49px;
   border: $border;
   max-width: $maxWidth;
   color: $color;
   border-radius: 2px;
   background-color: transparent;
+}
+
+@mixin servicesCard {
+  width: 100%;
+  border-radius: 16px;
+  max-width: 368px;
+  height: 495px;
+  background: color.$primary-hero-background;
+  padding: 65px 0 0 32px;
+  padding-right: 15px;
+}
+
+@mixin servicesTitle {
+  line-height: 133%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-card-title;
+  max-width: 148px;
+  height: 70px;
+}
+
+@mixin servicesSubTitle {
+  line-height: 150%;
+  color: color.$primary-link-color;
+  max-width: 222px;
 }

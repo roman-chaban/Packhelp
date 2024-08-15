@@ -1,0 +1,70 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.services {
+  min-height: 100vh;
+}
+
+.servicesContainer {
+  padding: 0 30px;
+  @include mainContainer;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.servicesTitles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.servicesTitle {
+  @include sectionTitle;
+  display: flex;
+  align-content: center;
+  gap: 15px;
+}
+
+.servicesSubMark {
+  @include sectionSubMark;
+}
+
+.servicesCards {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.servicesCard {
+  @include servicesCard;
+  position: relative;
+}
+
+.servicesCardTitle {
+  @include servicesTitle;
+}
+
+.firstTitle {
+  max-width: 100%;
+}
+
+
+.servicesCardSubTitle {
+    @include servicesSubTitle;
+    min-height: 100px;
+}
+
+.more {
+    margin-top: 22px;
+    color: color.$primary-link-color;
+    background-color: transparent;
+}
+
+.servicesCardImage {
+    position: absolute;
+    right: 32px;
+    bottom: 36px;
+}

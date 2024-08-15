@@ -856,9 +856,6 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .differenceCard {
@@ -901,6 +898,11 @@ h6 {
 }
 
 .softwareContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1440px;
   padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1069,6 +1071,7 @@ h6 {
 
 .primaryButton {
   width: 100%;
+  line-height: 100%;
   height: 49px;
   border: 2px solid #fff;
   max-width: 149px;
@@ -1079,6 +1082,7 @@ h6 {
 
 .secondaryButton {
   width: 100%;
+  line-height: 100%;
   height: 49px;
   border: 2px solid #2f2f2f;
   max-width: 171px;
@@ -1091,6 +1095,107 @@ h6 {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.services {
+  min-height: 100vh;
+}
+
+.servicesContainer {
+  padding: 0 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.servicesTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.servicesTitle {
+  line-height: 125%;
+  color: #2f2f2f;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 15px;
+}
+
+.servicesSubMark {
+  line-height: 125%;
+  color: #949494;
+}
+
+.servicesCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.servicesCard {
+  width: 100%;
+  border-radius: 16px;
+  max-width: 368px;
+  height: 495px;
+  background: #f6f8fa;
+  padding: 65px 0 0 32px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.servicesCardTitle {
+  line-height: 133%;
+  color: #2f2f2f;
+  font-size: 24px;
+  max-width: 148px;
+  height: 70px;
+}
+
+.firstTitle {
+  max-width: 100%;
+}
+
+.servicesCardSubTitle {
+  line-height: 150%;
+  color: #2f2f2f;
+  max-width: 222px;
+  min-height: 100px;
+}
+
+.more {
+  margin-top: 22px;
+  color: #2f2f2f;
+  background-color: transparent;
+}
+
+.servicesCardImage {
+  position: absolute;
+  right: 32px;
+  bottom: 36px;
 }
 
 body {
