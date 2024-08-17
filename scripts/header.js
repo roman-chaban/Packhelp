@@ -2,20 +2,25 @@
 
 const fetchHeaderLinks = async () => {
   try {
-    const request = await fetch('/data/header.json');
-    const contentType = request.headers.get('content-type');
-    if (contentType && contentType.includes('application/json')) {
-      const data = await request.json();
-      return data;
-    } else {
-      console.error('Response is not JSON:', await request.text());
-      return [];
+    const response = await fetch('/data/header.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
+
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      const text = await response.text();
+      throw new Error(`Response is not JSON: ${text}`);
+    }
+
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.log(error.message);
+    console.error('Error fetching header links:', error.message);
     return [];
   } finally {
-    console.log('Links is fetching');
+    console.log('Links fetching is complete');
   }
 };
 
@@ -39,11 +44,22 @@ const setHeaderLinksByNavMenu = (data) => {
   return menu.outerHTML;
 };
 
-fetchHeaderLinks()
-  .then((data) => {
+const initHeaderMenu = async () => {
+  const headerNav = document.querySelector('.headerNav');
+
+  if (!headerNav) {
+    console.error('Header navigation container not found');
+    return;
+  }
+
+  try {
+    const data = await fetchHeaderLinks();
     const headerLinksHTML = setHeaderLinksByNavMenu(data);
-    document.querySelector('.headerNav').innerHTML = headerLinksHTML;
-  })
-  .catch((error) => {
-    console.error('Error fetching header links:', error);
-  });
+
+    headerNav.innerHTML = headerLinksHTML;
+  } catch (error) {
+    console.error('Error initializing header menu:', error.message);
+  }
+};
+
+document.addEventListener('DOMContentLoaded', initHeaderMenu);
