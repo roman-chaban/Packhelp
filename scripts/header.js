@@ -3,12 +3,16 @@
 const fetchHeaderLinks = async () => {
   try {
     const request = await fetch('/data/header.json');
-    const data = await request.json();
-    return data;
-  } catch (error) {
-    if (error instanceof Error) {
-      console.log(error.message);
+    const contentType = request.headers.get('content-type');
+    if (contentType && contentType.includes('application/json')) {
+      const data = await request.json();
+      return data;
+    } else {
+      console.error('Response is not JSON:', await request.text());
+      return [];
     }
+  } catch (error) {
+    console.log(error.message);
     return [];
   } finally {
     console.log('Links is fetching');
