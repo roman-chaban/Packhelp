@@ -2,7 +2,7 @@
 
 const fetchHeaderLinks = async () => {
   try {
-    const response = await fetch('/data/header.json');
+    const response = await fetch('./data/header.json');
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetchingProductsTitles = async () => {
     try {
-      const request = await fetch('/data/products.json');
+      const request = await fetch('./data/products.json');
       
       if (!request.ok) {
         throw new Error(`HTTP error! status: ${request.status}`);
