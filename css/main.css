@@ -1291,15 +1291,15 @@ h6 {
 }
 
 .needCard:nth-child(1) {
-  background: url(/images/needs/primary.svg) no-repeat center center;
+  background: url(../images/needs/primary.svg) no-repeat center center;
 }
 
 .needCard:nth-child(2) {
-  background: url(/images/needs/secondary.svg) no-repeat center center;
+  background: url(../images/needs/secondary.svg) no-repeat center center;
 }
 
 .needCard:nth-child(3) {
-  background: url(/images/needs/tertiary.svg) no-repeat center center;
+  background: url(../images/needs/tertiary.svg) no-repeat center center;
 }
 
 .cardContainer {
@@ -1316,8 +1316,13 @@ h6 {
   gap: 10px;
 }
 
-.cardTitle,
 .cardSubMark {
+  line-height: 133%;
+  color: #fff;
+  font-size: 24px;
+}
+
+.needCardTitle {
   line-height: 133%;
   color: #fff;
   font-size: 24px;
