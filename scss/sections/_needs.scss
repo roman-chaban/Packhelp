@@ -1,0 +1,144 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.needs {
+  margin-bottom: 168px;
+}
+
+.needsContainer {
+  @include mainContainer;
+  max-width: 1440px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.needsTitles {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.needsTitle {
+  @include sectionTitle;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.needsSubMark {
+  @include sectionSubMark;
+}
+
+.needsCards {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.needCard {
+  flex: 1;
+  max-width: calc((100% / 3) - 16px);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 16px;
+  aspect-ratio: 2.4 / 4;
+}
+
+.needCardContainer {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.needCard:nth-child(1) {
+  background: url(/images/needs/primary.svg) no-repeat center center;
+}
+
+.needCard:nth-child(2) {
+  background: url(/images/needs/secondary.svg) no-repeat center center;
+}
+
+.needCard:nth-child(3) {
+  background: url(/images/needs/tertiary.svg) no-repeat center center;
+}
+
+.cardContainer {
+  padding: 32px 0 0 32px;
+}
+
+.cardTitles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTitle,
+.cardSubMark {
+  line-height: 133%;
+  color: color.$primary-natural-white;
+  font-size: size.$primary-card-title;
+}
+
+.cardTitleBlack,
+.cardSubMarkBlack {
+  color: color.$primary-link-color;
+}
+
+.cardTopBlock {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.needCardButton {
+  color: color.$primary-natural-white;
+  border: 2px solid color.$primary-natural-white;
+  line-height: 100%;
+  background: transparent;
+  padding: 14px 18px;
+  border-radius: 2px;
+}
+
+.needCardButtonSecondary {
+  color: color.$primary-link-color;
+  border: 2px solid color.$primary-link-color;
+}
+
+.flagIcon {
+  object-fit: cover;
+  object-position: left;
+  width: 24px;
+  height: 24px;
+  border-radius: 200px;
+  border: 2px solid color.$primary-natural-white;
+}
+
+.cardBottomBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottomMenuTitle {
+  line-height: 150%;
+  color: color.$primary-natural-white;
+  max-width: 120px;
+}
+
+.blackMenuTitle {
+  color: color.$primary-link-color;
+}
+
+.moreTitleWidth {
+  max-width: 130px;
+}

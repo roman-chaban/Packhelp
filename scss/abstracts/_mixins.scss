@@ -94,3 +94,10 @@
   color: color.$primary-link-color;
   max-width: 222px;
 }
+
+@mixin needCardBgImage {
+  width: 516px;
+  max-width: 100%;
+  border-radius: 16px;
+  height: 752px;
+}

@@ -3,7 +3,7 @@
 @use '../../scss/abstracts/mixins' as *;
 
 .services {
-  min-height: 100vh;
+  margin-bottom: 168px;
 }
 
 .servicesContainer {
@@ -51,20 +51,19 @@
   max-width: 100%;
 }
 
-
 .servicesCardSubTitle {
-    @include servicesSubTitle;
-    min-height: 100px;
+  @include servicesSubTitle;
+  min-height: 100px;
 }
 
 .more {
-    margin-top: 22px;
-    color: color.$primary-link-color;
-    background-color: transparent;
+  margin-top: 22px;
+  color: color.$primary-link-color;
+  background-color: transparent;
 }
 
 .servicesCardImage {
-    position: absolute;
-    right: 32px;
-    bottom: 36px;
+  position: absolute;
+  right: 32px;
+  bottom: 36px;
 }

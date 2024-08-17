@@ -1098,7 +1098,7 @@ h6 {
 }
 
 .services {
-  min-height: 100vh;
+  margin-bottom: 168px;
 }
 
 .servicesContainer {
@@ -1196,6 +1196,201 @@ h6 {
   position: absolute;
   right: 32px;
   bottom: 36px;
+}
+
+.needs {
+  margin-bottom: 168px;
+}
+
+.needsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.needsTitles {
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.needsTitle {
+  line-height: 125%;
+  color: #2f2f2f;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.needsSubMark {
+  line-height: 125%;
+  color: #949494;
+}
+
+.needsCards {
+  width: 100%;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.needCard {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: calc(33.3333333333% - 16px);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 16px;
+  aspect-ratio: 2.4/4;
+}
+
+.needCardContainer {
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.needCard:nth-child(1) {
+  background: url(/images/needs/primary.svg) no-repeat center center;
+}
+
+.needCard:nth-child(2) {
+  background: url(/images/needs/secondary.svg) no-repeat center center;
+}
+
+.needCard:nth-child(3) {
+  background: url(/images/needs/tertiary.svg) no-repeat center center;
+}
+
+.cardContainer {
+  padding: 32px 0 0 32px;
+}
+
+.cardTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.cardTitle,
+.cardSubMark {
+  line-height: 133%;
+  color: #fff;
+  font-size: 24px;
+}
+
+.cardTitleBlack,
+.cardSubMarkBlack {
+  color: #2f2f2f;
+}
+
+.cardTopBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.needCardButton {
+  color: #fff;
+  border: 2px solid #fff;
+  line-height: 100%;
+  background: transparent;
+  padding: 14px 18px;
+  border-radius: 2px;
+}
+
+.needCardButtonSecondary {
+  color: #2f2f2f;
+  border: 2px solid #2f2f2f;
+}
+
+.flagIcon {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  width: 24px;
+  height: 24px;
+  border-radius: 200px;
+  border: 2px solid #fff;
+}
+
+.cardBottomBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottomMenuTitle {
+  line-height: 150%;
+  color: #fff;
+  max-width: 120px;
+}
+
+.blackMenuTitle {
+  color: #2f2f2f;
+}
+
+.moreTitleWidth {
+  max-width: 130px;
 }
 
 body {
