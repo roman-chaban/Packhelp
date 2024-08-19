@@ -1,0 +1,96 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.footer {
+  min-height: 100vh;
+  padding: 0 30px;
+}
+
+.footerContainer {
+  @include mainContainer;
+  max-width: 1440px;
+  height: 816px;
+  background: color.$primary-banner-background;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.footerTopInfoBlock {
+  padding: 39px 32px 32px 32px;
+}
+
+.topInfoBlockCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topInfoCard {
+  width: 100%;
+  max-width: 309px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.topInfoImage {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.smallInfoImage {
+  height: 136px;
+  object-fit: contain;
+}
+
+.topInfoCardTitle {
+  line-height: 150%;
+  color: color.$primary-link-color;
+}
+
+.topInfoCardSubTitle {
+  line-height: 171%;
+  font-size: size.$primary-link-size;
+}
+
+.footerMenu {
+  padding: 0 32px;
+}
+
+.justFoundBlock {
+  width: 100%;
+  max-width: 287px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.justFoundBlock > .justFoundTitle {
+  line-height: 133%;
+  width: 100%;
+  max-width: 252px;
+  color: color.$primary-link-color;
+  font-size: size.$primary-card-title;
+}
+
+.justFoundIconsBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.justFoundSubTitle {
+  line-height: 300%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-just-found-subTitle;
+}
+
+.addTitle {
+  line-height: 200%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-small-title-size;
+}

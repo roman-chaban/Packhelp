@@ -294,6 +294,128 @@ h6 {
   gap: 12px;
 }
 
+.footer {
+  min-height: 100vh;
+  padding: 0 30px;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 816px;
+  background: #f6f8fa;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 65px;
+}
+
+.footerTopInfoBlock {
+  padding: 39px 32px 32px 32px;
+}
+
+.topInfoBlockCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topInfoCard {
+  width: 100%;
+  max-width: 309px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 23px;
+}
+
+.topInfoImage {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+
+.smallInfoImage {
+  height: 136px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.topInfoCardTitle {
+  line-height: 150%;
+  color: #2f2f2f;
+}
+
+.topInfoCardSubTitle {
+  line-height: 171%;
+  font-size: 14px;
+}
+
+.footerMenu {
+  padding: 0 32px;
+}
+
+.justFoundBlock {
+  width: 100%;
+  max-width: 287px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+}
+
+.justFoundBlock > .justFoundTitle {
+  line-height: 133%;
+  width: 100%;
+  max-width: 252px;
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
+.justFoundIconsBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.justFoundSubTitle {
+  line-height: 300%;
+  color: #2f2f2f;
+  font-size: 8px;
+}
+
+.addTitle {
+  line-height: 200%;
+  color: #2f2f2f;
+  font-size: 12px;
+}
+
 .hero {
   padding: 60px 40px;
   padding-bottom: 0;
@@ -1635,6 +1757,7 @@ h6 {
   padding: 14px 18px;
   line-height: 107%;
   border-radius: 2px;
+  color: #fff;
 }
 
 .otherBanners {
