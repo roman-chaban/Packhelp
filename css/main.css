@@ -273,7 +273,7 @@ h6 {
   height: 24px;
 }
 
-.headerFormInput {
+[type=text] {
   width: 100%;
   max-width: 259px;
   height: 30px;
@@ -1536,6 +1536,190 @@ h6 {
 .menuSubTitlePrimary {
   line-height: 150%;
   color: #2f2f2f;
+}
+
+.people {
+  margin-bottom: 184px;
+}
+
+.peopleContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+
+.peopleTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  line-height: 125%;
+  color: #2f2f2f;
+  font-size: 32px;
+}
+
+.peopleSubMark {
+  line-height: 125%;
+  color: #949494;
+}
+
+.firstBanner {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 552px;
+  background: #f6f8fa;
+}
+
+.bannerContainer {
+  padding: 32px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.peopleBannersBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+.firstBannerTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 88px;
+  line-height: 133%;
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[data-button=helloBtn] {
+  background: #3b61ff;
+  padding: 14px 18px;
+  line-height: 107%;
+  border-radius: 2px;
+}
+
+.otherBanners {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.secondBanner {
+  padding: 32px 0 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-radius: 16px;
+  max-width: 552px;
+  height: 297px;
+  background: #f6f8fa;
+}
+
+.thirdBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 21px;
+  padding: 32px;
+  width: 100%;
+  border-radius: 16px;
+  max-width: 552px;
+  height: 297px;
+  background: #f6f8fa;
+}
+
+.secondTitle {
+  line-height: 133%;
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
+.secondBannerImage {
+  width: 100%;
+  height: auto;
+  -o-object-position: 0px 9px;
+     object-position: 0px 9px;
+}
+
+.thirdBannerTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 133%;
+  color: #2f2f2f;
+  font-size: 24px;
+}
+
+.thirdBannerSubMark {
+  color: #949494;
+}
+
+.thirdBannerImage {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {

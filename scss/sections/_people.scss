@@ -1,0 +1,132 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+.people {
+  margin-bottom: 184px;
+}
+
+.peopleContainer {
+  @include mainContainer;
+  padding: 0 30px;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.peopleTitle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  @include sectionTitle;
+}
+
+.peopleSubMark {
+  @include sectionSubMark;
+}
+
+.firstBanner {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 552px;
+  background: color.$primary-banner-background;
+}
+
+.bannerContainer {
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.peopleBannersBlock {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+
+.firstBannerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 88px;
+  line-height: 133%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-card-title;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+[data-button='helloBtn'] {
+  background: color.$primary-customize-color;
+  padding: 14px 18px;
+  line-height: 107%;
+  border-radius: 2px;
+}
+
+.otherBanners {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.secondBanner {
+  padding: 32px 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 16px;
+  max-width: 552px;
+  height: 297px;
+  background: color.$primary-banner-background;
+}
+
+.thirdBanner {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 32px;
+  width: 100%;
+  border-radius: 16px;
+  max-width: 552px;
+  height: 297px;
+  background: color.$primary-banner-background;
+}
+
+.secondTitle {
+  line-height: 133%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-card-title;
+}
+
+.secondBannerImage {
+  width: 100%;
+  height: auto;
+  object-position: 0px 9px;
+}
+
+.thirdBannerTitle {
+  display: flex;
+  flex-direction: column;
+  line-height: 133%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-card-title;
+}
+
+.thirdBannerSubMark {
+  color: color.$primary-light-gray;
+}
+
+.thirdBannerImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
