@@ -11,6 +11,7 @@
   @include mainContainer;
   max-width: 1440px;
   padding-inline: 32px;
+  margin-block-end: 32px;
   padding-block-end: 32px;
   height: 100%;
   background: color.$primary-banner-background;
@@ -200,7 +201,6 @@
   }
 }
 
-
 .socialIconsLogo {
   display: flex;
   align-items: center;
@@ -211,4 +211,50 @@
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.trustpilotLogo {
+  margin-block-end: 4px;
+}
+
+.footerBottomMenu {
+  @include mainContainer;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 48px;
+}
+
+.bottomMenuInformation {
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentTitle,
+.paymentSubTitle {
+  line-height: 200%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-small-title-size;
+}
+
+.bottomAddress {
+  display: flex;
+  flex-direction: column;
+  line-height: 200%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-small-title-size;
+  font-style: normal;
+}
+
+.paymentIconsItems {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-block-start: 8px;
+}
+
+.paymentIcon {
+  padding: 4px 5px;
+  border: 2px solid color.$primary-input-border;
 }
