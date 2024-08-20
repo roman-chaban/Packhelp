@@ -322,7 +322,10 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   max-width: 1440px;
-  height: 816px;
+  padding-inline: 32px;
+  -webkit-padding-after: 32px;
+          padding-block-end: 32px;
+  height: 100%;
   background: #f6f8fa;
   border-radius: 16px;
   display: -webkit-box;
@@ -336,7 +339,7 @@ h6 {
 }
 
 .footerTopInfoBlock {
-  padding: 39px 32px 32px 32px;
+  padding: 39px 0px 32px 0px;
 }
 
 .topInfoBlockCards {
@@ -387,10 +390,6 @@ h6 {
   font-size: 14px;
 }
 
-.footerMenu {
-  padding: 0 32px;
-}
-
 .justFoundBlock {
   width: 100%;
   max-width: 287px;
@@ -401,7 +400,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 28px;
+  gap: 23px;
 }
 
 .justFoundBlock > .justFoundTitle {
@@ -432,6 +431,175 @@ h6 {
   line-height: 200%;
   color: #2f2f2f;
   font-size: 12px;
+}
+
+.footerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 68px;
+  padding-bottom: 71px;
+  border-bottom: 1.5px solid #c5c5c5;
+}
+
+.footerMenuItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 137px;
+}
+
+.primaryMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 23px;
+}
+
+.sustainabilityMenu,
+.designMenu,
+.companyMenu,
+.resourcesMenu,
+.contactMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.menuFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.secondaryMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+
+#title {
+  line-height: 150%;
+  color: #2f2f2f;
+}
+
+.footerMenuListItem {
+  line-height: 171%;
+  color: #2f2f2f;
+  font-size: 14px;
+}
+
+.footerListItemCareers {
+  line-height: 171%;
+  color: #2f2f2f;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+#hiringSubMark {
+  display: block;
+  width: 100%;
+  max-width: 77px;
+  padding: 4px;
+  background: #3b61ff;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+}
+
+.footerCopyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.copyrightTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.copyrightTitle {
+  line-height: 171%;
+  color: #2f2f2f;
+  font-size: 14px;
+}
+
+.copyrightSubTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  line-height: 171%;
+  color: #2f2f2f;
+  font-size: 14px;
+}
+.copyrightSubTitle::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #2f2f2f;
+}
+
+.socialIconsLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
 }
 
 .hero {

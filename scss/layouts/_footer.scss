@@ -10,7 +10,9 @@
 .footerContainer {
   @include mainContainer;
   max-width: 1440px;
-  height: 816px;
+  padding-inline: 32px;
+  padding-block-end: 32px;
+  height: 100%;
   background: color.$primary-banner-background;
   border-radius: 16px;
   display: flex;
@@ -19,7 +21,7 @@
 }
 
 .footerTopInfoBlock {
-  padding: 39px 32px 32px 32px;
+  padding: 39px 0px 32px 0px;
 }
 
 .topInfoBlockCards {
@@ -57,16 +59,12 @@
   font-size: size.$primary-link-size;
 }
 
-.footerMenu {
-  padding: 0 32px;
-}
-
 .justFoundBlock {
   width: 100%;
   max-width: 287px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 23px;
 }
 
 .justFoundBlock > .justFoundTitle {
@@ -93,4 +91,124 @@
   line-height: 200%;
   color: color.$primary-link-color;
   font-size: size.$primary-small-title-size;
+}
+
+.footerMenu {
+  display: flex;
+  gap: 68px;
+  padding-bottom: 71px;
+  border-bottom: 1.5px solid color.$primary-gray-circle;
+}
+
+.footerMenuItems {
+  display: flex;
+  gap: 137px;
+}
+
+.primaryMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.sustainabilityMenu,
+.designMenu,
+.companyMenu,
+.resourcesMenu,
+.contactMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.secondaryMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+#title {
+  line-height: 150%;
+  color: color.$primary-link-color;
+}
+
+.footerMenuListItem {
+  line-height: 171%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-link-size;
+}
+
+.footerListItemCareers {
+  line-height: 171%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-link-size;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#hiringSubMark {
+  display: block;
+  width: 100%;
+  max-width: 77px;
+  padding: 4px;
+  background: color.$primary-customize-color;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: color.$primary-natural-white;
+  font-size: size.$primary-hiring-label;
+}
+
+.footerCopyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyrightTitles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.copyrightTitle {
+  line-height: 171%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-link-size;
+}
+
+.copyrightSubTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 171%;
+  color: color.$primary-link-color;
+  font-size: size.$primary-link-size;
+  &::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background-color: color.$primary-link-color;
+  }
+}
+
+
+.socialIconsLogo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

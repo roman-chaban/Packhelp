@@ -1,0 +1,30 @@
+[
+    {
+      "sustainability": {
+        "title": "Sustainability",
+        "items": [
+          "Eco Badge",
+          "Eco properties",
+          "FSC Certification",
+          "Planting trees"
+        ]
+      },
+      "design": {
+        "title": "Design",
+        "items": ["Packaging Templates", "Inspiring stories"]
+      },
+      "company": {
+        "title": "Company",
+        "items": ["About us", "Become a Supplier", "Become an Affiliate", "Careers", "Partners Program", "Press", "Investor relations", "Leadership", "Terms of Service", "Privacy Policy"]
+      },
+      "resources": {
+        "title": "Resources",
+        "items": ["Blog", "Help", "iOS app"]
+      },
+      "contact": {
+        "title": "Contact",
+        "items": ["Contact", "Impressum", "Return policy"]
+      }
+    }
+  ]
+  
