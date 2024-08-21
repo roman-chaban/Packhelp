@@ -216,3 +216,14 @@
     align-items: start;
   }
 }
+
+@include toMobile {
+  .needCard:nth-child(1),
+  .needCard:nth-child(2),
+  .needCard:nth-child(3) {
+    max-width: 100%;
+  }
+  .needsContainer {
+    @include containerPaddings;
+  }
+}

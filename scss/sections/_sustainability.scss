@@ -168,6 +168,9 @@
 }
 
 @include toMobile {
+  .sustainabilityContainer {
+    @include containerPaddings;
+  }
   .sustainabilityTitle {
     flex-direction: column;
     gap: 5px;
@@ -178,5 +181,15 @@
   }
   .titlesItemsBlock {
     padding-left: 20px;
+  }
+  .subMark {
+    display: block;
+    max-width: 235px;
+  }
+  .primaryBannerImage {
+    max-width: 85%;
+  }
+  .secondaryTitleColor  {
+    max-width: 250px;
   }
 }

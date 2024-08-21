@@ -219,10 +219,14 @@
 }
 
 @include toMobile {
+  .productsContainer {
+    @include containerPaddings;
+  }
   .primarySubtitle {
     font-size: size.$primary-small-title-size;
   }
   .productsCards {
     padding-bottom: 44px;
+    padding-right: 0;
   }
 }

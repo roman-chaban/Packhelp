@@ -4,7 +4,6 @@
 @use '../../scss/abstracts/media-mixins' as *;
 
 .footer {
-  min-height: 100vh;
   padding: 0 30px;
 }
 
@@ -346,17 +345,26 @@
 }
 
 @include toMobile {
+  .footer {
+    @include containerPaddings;
+  }
   .companyAndSecondaryBlock,
   .primaryMenu {
     max-width: 100%;
+  }
+  .primaryMenu {
+    gap: 103px;
+  }
+  .companyAndSecondaryBlock {
+    gap: 70px;
   }
   .footerMenuItems {
     max-width: 100%;
   }
 
   .footerTopInfoBlock {
-    padding: 30px 0px 25px 0px
-  } 
+    padding: 30px 0px 25px 0px;
+  }
 
   .secondaryMenu {
     flex-direction: column;

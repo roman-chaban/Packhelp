@@ -53,7 +53,7 @@
   width: 100%;
   max-width: 362px;
   line-height: 120%;
-  font-size: size.$primary-main-size;
+  font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
   color: color.$primary-link-color;
 }
 
@@ -212,7 +212,7 @@
     gap: 45px;
   }
   .mainBanner {
-    bottom: 25px;
+    bottom: 65px;
     max-height: 415px;
   }
   .productsLogos {
@@ -241,10 +241,11 @@
 
 @include toMobileLarge {
   .heroContainer {
-    max-height: 400px;
+    max-height: 420px;
   }
   .heroInformationBlock {
     padding-inline-start: 15px;
+    padding-block-start: 20px;
   }
   .heroTitle {
     font-size: size.$primary-card-title;
@@ -263,7 +264,7 @@
     max-width: 60px;
   }
   .mainBanner {
-    max-width: 65%;
+    max-width: 55%;
   }
 }
 
@@ -293,5 +294,18 @@
   }
   .mainBanner {
     bottom: 40px;
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 345px) {
+  .mainBanner {
+    display: none;
+  }
+  .heroButtonsBlock {
+    flex-direction: row;
+  }
+  .heroInformationBlock {
+    max-width: 100%;
   }
 }

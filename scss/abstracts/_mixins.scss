@@ -106,6 +106,10 @@
   height: 752px;
 }
 
+@mixin containerPaddings {
+  padding-inline: 20px;
+}
+
 @mixin byTablet {
   @media only screen and (1101px >= width) {
     @content;

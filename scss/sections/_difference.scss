@@ -108,3 +108,9 @@
     padding: 20px;
   }
 }
+
+@include toMobile {
+  .packhelpDifferenceContainer {
+    @include containerPaddings;
+  }
+}

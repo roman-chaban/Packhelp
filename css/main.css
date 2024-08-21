@@ -360,9 +360,14 @@ h6 {
   .navMenuListItem:nth-child(2) {
     border-right: 1px solid #e7e7e7;
   }
+  .headerLogoIcon {
+    max-width: 80px;
+  }
+  .compainsTitle {
+    display: none;
+  }
 }
 .footer {
-  min-height: 100vh;
   padding: 0 30px;
 }
 
@@ -845,9 +850,18 @@ h6 {
   }
 }
 @media only screen and (525px >= width) {
+  .footer {
+    padding-inline: 20px;
+  }
   .companyAndSecondaryBlock,
   .primaryMenu {
     max-width: 100%;
+  }
+  .primaryMenu {
+    gap: 103px;
+  }
+  .companyAndSecondaryBlock {
+    gap: 70px;
   }
   .footerMenuItems {
     max-width: 100%;
@@ -962,7 +976,7 @@ h6 {
   width: 100%;
   max-width: 362px;
   line-height: 120%;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
   color: #2f2f2f;
 }
 
@@ -1180,7 +1194,7 @@ h6 {
     gap: 45px;
   }
   .mainBanner {
-    bottom: 25px;
+    bottom: 65px;
     max-height: 415px;
   }
   .productsLogos {
@@ -1209,11 +1223,13 @@ h6 {
 }
 @media only screen and (768px >= width) {
   .heroContainer {
-    max-height: 400px;
+    max-height: 420px;
   }
   .heroInformationBlock {
     -webkit-padding-start: 15px;
             padding-inline-start: 15px;
+    -webkit-padding-before: 20px;
+            padding-block-start: 20px;
   }
   .heroTitle {
     font-size: 24px;
@@ -1237,7 +1253,7 @@ h6 {
     max-width: 60px;
   }
   .mainBanner {
-    max-width: 65%;
+    max-width: 55%;
   }
 }
 @media only screen and (525px >= width) {
@@ -1264,6 +1280,21 @@ h6 {
   }
   .mainBanner {
     bottom: 40px;
+    max-width: 85%;
+  }
+}
+@media (max-width: 345px) {
+  .mainBanner {
+    display: none;
+  }
+  .heroButtonsBlock {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .heroInformationBlock {
+    max-width: 100%;
   }
 }
 .products {
@@ -1562,11 +1593,15 @@ h6 {
   }
 }
 @media only screen and (525px >= width) {
+  .productsContainer {
+    padding-inline: 20px;
+  }
   .primarySubtitle {
     font-size: 12px;
   }
   .productsCards {
     padding-bottom: 44px;
+    padding-right: 0;
   }
 }
 .sustainability {
@@ -1768,6 +1803,9 @@ h6 {
   }
 }
 @media only screen and (525px >= width) {
+  .sustainabilityContainer {
+    padding-inline: 20px;
+  }
   .sustainabilityTitle {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1783,6 +1821,16 @@ h6 {
   }
   .titlesItemsBlock {
     padding-left: 20px;
+  }
+  .subMark {
+    display: block;
+    max-width: 235px;
+  }
+  .primaryBannerImage {
+    max-width: 85%;
+  }
+  .secondaryTitleColor {
+    max-width: 250px;
   }
 }
 .packhelpDifference {
@@ -1917,6 +1965,11 @@ h6 {
   .differenceCard {
     max-height: 155px;
     padding: 20px;
+  }
+}
+@media only screen and (525px >= width) {
+  .packhelpDifferenceContainer {
+    padding-inline: 20px;
   }
 }
 .software {
@@ -2178,6 +2231,31 @@ h6 {
             align-items: start;
   }
 }
+@media only screen and (525px >= width) {
+  .softwareContainer {
+    padding-inline: 20px;
+  }
+  .blockImage {
+    max-width: 55%;
+  }
+  .designBlock {
+    max-height: 337px;
+  }
+  .sourceBlock {
+    max-height: 389px;
+  }
+  .designItem {
+    max-width: 120px;
+  }
+  .sourceItems {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 .services {
   margin-bottom: 168px;
 }
@@ -2336,6 +2414,9 @@ h6 {
   }
 }
 @media only screen and (525px >= width) {
+  .servicesContainer {
+    padding-inline: 20px;
+  }
   .servicesCardImage {
     bottom: 15px;
   }
@@ -2615,6 +2696,16 @@ h6 {
             align-items: start;
   }
 }
+@media only screen and (525px >= width) {
+  .needCard:nth-child(1),
+  .needCard:nth-child(2),
+  .needCard:nth-child(3) {
+    max-width: 100%;
+  }
+  .needsContainer {
+    padding-inline: 20px;
+  }
+}
 .testimonials {
   margin-bottom: 168px;
 }
@@ -2790,6 +2881,9 @@ h6 {
   }
 }
 @media only screen and (768px >= width) {
+  .testimonialsContainer {
+    padding-inline: 20px;
+  }
   .testimonialsTitle {
     font-size: 18px;
   }
@@ -2813,6 +2907,9 @@ h6 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+  .testimonialCardContainer {
+    padding: 14px;
   }
 }
 .people {
@@ -3018,7 +3115,9 @@ h6 {
   .firstBanner,
   .secondBanner,
   .thirdBanner {
+    position: relative;
     max-width: 100%;
+    max-height: 210px;
   }
   .bannerContainer {
     max-width: 100%;
@@ -3028,16 +3127,23 @@ h6 {
     position: absolute;
     max-width: 40%;
     right: 0;
+    bottom: 0;
   }
   .secondBannerImage {
     z-index: 3;
-    max-width: 100%;
+    position: absolute;
+    max-width: 85%;
+    right: 0;
+    bottom: 0;
   }
   .people {
     margin-bottom: 100px;
   }
 }
 @media only screen and (525px >= width) {
+  .peopleContainer {
+    padding-inline: 20px;
+  }
   .thirdBanner {
     max-height: 240px;
   }

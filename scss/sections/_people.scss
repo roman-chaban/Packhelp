@@ -149,7 +149,9 @@
   .firstBanner,
   .secondBanner,
   .thirdBanner {
+    position: relative;
     max-width: 100%;
+    max-height: 210px;
   }
   .bannerContainer {
     max-width: 100%;
@@ -159,10 +161,14 @@
     position: absolute;
     max-width: 40%;
     right: 0;
+    bottom: 0;
   }
   .secondBannerImage {
     z-index: 3;
-    max-width: 100%;
+    position: absolute;
+    max-width: 85%;
+    right: 0;
+    bottom: 0;
   }
   .people {
     margin-bottom: 100px;
@@ -170,6 +176,9 @@
 }
 
 @include toMobile {
+  .peopleContainer {
+    @include containerPaddings;
+  }
   .thirdBanner {
     max-height: 240px;
   }

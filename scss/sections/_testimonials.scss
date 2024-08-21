@@ -134,6 +134,9 @@
 }
 
 @include toMobileLarge {
+  .testimonialsContainer {
+    @include containerPaddings;
+  }
   .testimonialsTitle {
     font-size: size.$primary-media-subTitle;
   }
@@ -153,5 +156,8 @@
     flex-direction: column;
     gap: 5px;
     align-items: start;
+  }
+  .testimonialCardContainer {
+    padding: 14px;
   }
 }

@@ -157,4 +157,10 @@
   .navMenuListItem:nth-child(2) {
     border-right: 1px solid color.$primary-input-border;
   }
+  .headerLogoIcon {
+    max-width: 80px;
+  }
+  .compainsTitle {
+    display: none;
+  }
 }

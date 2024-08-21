@@ -121,8 +121,10 @@
   }
 }
 
-
 @include toMobile {
+  .servicesContainer {
+    @include containerPaddings;
+  }
   .servicesCardImage {
     bottom: 15px;
   }
