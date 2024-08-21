@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .testimonials {
   margin-bottom: 168px;
@@ -97,4 +98,60 @@
 .menuSubTitlePrimary {
   line-height: 150%;
   color: color.$primary-link-color;
+}
+
+@include byTablet {
+  .testimonialsTitle {
+    @include sectionTitleMedium;
+  }
+  .testimonialCard {
+    max-height: 555px;
+  }
+  .testimonialCardSubTitle {
+    font-size: size.$primary-media-subTitle;
+  }
+}
+
+@include byTabletSmall {
+  .testimonialCardContainer {
+    padding: 28px;
+  }
+  .testimonialsTitle {
+    @include sectionTitleSmall;
+  }
+  .testimonialCard {
+    max-height: 530px;
+  }
+  .testimonialCardSubTitle {
+    font-size: size.$primary-list-item-size;
+  }
+  .testimonialsCards {
+    flex-direction: column;
+  }
+  .testimonialCard {
+    max-height: 300px;
+  }
+}
+
+@include toMobileLarge {
+  .testimonialsTitle {
+    font-size: size.$primary-media-subTitle;
+  }
+  .grayCircles {
+    display: none;
+  }
+}
+
+@include toMobile {
+  .testimonialCardContainer {
+    gap: 20px;
+  }
+  .testimonialCard {
+    max-height: 355px;
+  }
+  .testimonialsTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
 }

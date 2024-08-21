@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .packhelpDifference {
   display: flex;
@@ -66,4 +67,44 @@
 
 .grayMark {
   color: color.$primary-light-gray;
+}
+
+@include byTablet {
+  .packhelpDifference {
+    margin-bottom: 100px;
+  }
+  .differenceTitle {
+    font-size: size.$primary-media-title-secondary;
+  }
+  .differenceCard > .cardSubtitle {
+    font-size: size.$primary-media-subTitle;
+  }
+}
+
+@include byTabletSmall {
+  .differenceTitle {
+    @include sectionTitleSmall;
+  }
+  .differenceCard {
+    max-width: 100%;
+    max-height: 200px;
+  }
+  .differenceCard > .cardSubtitle {
+    font-size: size.$primary-link-size;
+  }
+  .differenceCards {
+    flex-direction: column;
+  }
+}
+
+@include toMobileLarge {
+  .differenceTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+  .differenceCard {
+    max-height: 155px;
+    padding: 20px;
+  }
 }

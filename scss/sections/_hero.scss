@@ -27,7 +27,7 @@
   width: 100%;
   max-width: 600px;
   @media (max-width: 1000px) {
-    max-width: 90%;
+    max-width: 50%;
     object-fit: cover;
     bottom: 40px;
   }
@@ -116,7 +116,7 @@
   gap: 16px;
 }
 
-.productTitle {
+.compainsTitle {
   line-height: 200%;
   text-transform: uppercase;
   color: color.$primary-link-color;
@@ -127,4 +127,171 @@
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.productLogo {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: scaleUp 1s ease-in-out forwards;
+  &:hover {
+    transform: scale(1.15);
+    animation: none;
+  }
+}
+
+.productLogo:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.productLogo:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.productLogo:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.productLogo:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.productLogo:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.productLogo:nth-child(6) {
+  animation-delay: 1.5s;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include byTablet {
+  .hero {
+    padding-block-start: 40px;
+    margin-bottom: 100px;
+  }
+  .heroContainer {
+    min-height: 375px;
+  }
+  .heroInformationBlock {
+    padding-block-start: 35px;
+    max-width: 65%;
+    max-height: 85%;
+  }
+  .heroTitlesBlock {
+    gap: 12px;
+  }
+  .heroTitle {
+    font-size: size.$primary-media-title;
+  }
+  .heroSubTitle {
+    font-size: size.$primary-link-size;
+    max-width: 262px;
+  }
+  .customizeButton {
+    font-size: size.$primary-small-title-size;
+    padding-block-start: 14px;
+    max-width: 170px;
+  }
+  .buyStockButton {
+    font-size: size.$primary-small-title-size;
+    padding-block-start: 14px;
+    max-width: 200px;
+  }
+  .heroFeaturesList {
+    gap: 45px;
+  }
+  .mainBanner {
+    bottom: 25px;
+    max-height: 415px;
+  }
+  .productsLogos {
+    gap: 20px;
+  }
+  .productLogo {
+    max-width: 106px;
+  }
+  .productLogo:nth-child(5) {
+    margin-block-start: 5px;
+  }
+  .heroProducts {
+    bottom: -40px;
+    gap: 5px;
+  }
+  .compainsTitle {
+    font-size: size.$primary-hiring-label;
+  }
+  .listItem {
+    font-size: size.$primary-small-title-size;
+  }
+  .navMenuListItem:last-child {
+    display: none;
+  }
+}
+
+@include toMobileLarge {
+  .heroContainer {
+    max-height: 400px;
+  }
+  .heroInformationBlock {
+    padding-inline-start: 15px;
+  }
+  .heroTitle {
+    font-size: size.$primary-card-title;
+  }
+  .heroButtonsBlock {
+    flex-direction: column;
+    align-items: start;
+  }
+  .heroFeaturesList {
+    display: none;
+  }
+  .customizeButton {
+    max-width: 200px;
+  }
+  .productLogo {
+    max-width: 60px;
+  }
+  .mainBanner {
+    max-width: 65%;
+  }
+}
+
+@include toMobile {
+  .hero {
+    padding-inline: 0;
+  }
+
+  .heroInformationBlock {
+    padding-inline-start: 12px;
+  }
+
+  .customizeButton {
+    max-width: 140px;
+    padding: 14px;
+  }
+  .buyStockButton {
+    max-width: 144px;
+    padding: 14px;
+  }
+  .productLogo:nth-child(5) {
+    display: none;
+  }
+
+  .productLogo:nth-child(6) {
+    display: none;
+  }
+  .mainBanner {
+    bottom: 40px;
+  }
 }

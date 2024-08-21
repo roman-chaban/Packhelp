@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../abstracts/media-mixins' as *;
 
 .services {
   margin-bottom: 168px;
@@ -66,4 +67,63 @@
   position: absolute;
   right: 32px;
   bottom: 36px;
+}
+
+@include byTablet {
+  .servicesTitle {
+    @include sectionTitleMedium;
+  }
+  .servicesCard {
+    padding: 32px;
+  }
+  .servicesCardTitle {
+    font-size: size.$primary-subMain-size;
+  }
+
+  .servicesCardImage {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@include byTabletSmall {
+  .servicesTitle {
+    @include sectionTitleSmall;
+  }
+  .servicesCards {
+    flex-direction: column;
+  }
+  .servicesCard {
+    max-width: 100%;
+    max-height: 380px;
+  }
+}
+
+@include toMobileLarge {
+  .servicesCardSubTitle {
+    max-width: 350px;
+  }
+  .servicesCard {
+    max-height: 295px;
+  }
+  .servicesCardImage {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@include toSmallTitle {
+  .servicesTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+}
+
+
+@include toMobile {
+  .servicesCardImage {
+    bottom: 15px;
+  }
 }

@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .sustainability {
   margin-bottom: 160px;
@@ -120,4 +121,62 @@
   line-height: 133%;
   font-size: size.$primary-card-title;
   color: color.$primary-natural-white;
+}
+
+@include byTablet {
+  .sustainabilityTitle {
+    @include sectionTitleMedium;
+  }
+}
+
+@include byTabletSmall {
+  .sustainabilityTitle {
+    @include sectionTitleSmall;
+  }
+  .itemBlock {
+    max-height: 450px;
+    max-width: 100%;
+  }
+  .itemTitle {
+    font-size: size.$primary-subMain-size;
+  }
+  .sustainabilityItemsBlock {
+    flex-direction: column;
+  }
+  .primaryBannerImage {
+    position: absolute;
+    right: 0;
+  }
+  .primaryBannerImage,
+  .secondaryBannerImage {
+    max-height: 83%;
+    max-width: 75%;
+  }
+  .secondaryBannerImage {
+    bottom: 0;
+  }
+}
+
+@include toMobileLarge {
+  .itemBlock {
+    position: relative;
+  }
+  .primaryBannerImage {
+    right: 1px;
+    top: 140px;
+  }
+}
+
+@include toMobile {
+  .sustainabilityTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+  .primaryBannerImage {
+    top: 220px;
+  }
+  .titlesItemsBlock {
+    padding-left: 20px;
+  }
 }

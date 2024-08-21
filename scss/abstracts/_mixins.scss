@@ -1,6 +1,10 @@
 @use '../colors/colors' as color;
 @use '../abstracts/globals' as size;
 
+@mixin fluidTypography {
+  font-size: calc(1rem + (1.5 - 1) * ((100vw - 320px) / (1440 - 320)));
+}
+
 @mixin mainContainer {
   width: 100%;
   max-width: 1200px;
@@ -100,4 +104,28 @@
   max-width: 100%;
   border-radius: 16px;
   height: 752px;
+}
+
+@mixin byTablet {
+  @media only screen and (1101px >= width) {
+    @content;
+  }
+}
+
+@mixin byTabletSmall {
+  @media only screen and (900px >= width) {
+    @content;
+  }
+}
+
+@mixin toMobileLarge {
+  @media only screen and (768px >= width) {
+    @content;
+  }
+}
+
+@mixin toMobile {
+  @media only screen and (525px >= width) {
+    @content;
+  }
 }

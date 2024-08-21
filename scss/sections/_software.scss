@@ -1,6 +1,7 @@
 @use '../abstracts/globals' as size;
 @use '../colors/colors' as color;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/media-mixins' as *;
 
 .software {
   margin-bottom: 160px;
@@ -124,4 +125,49 @@
 .blockImage {
   max-width: 100%;
   object-fit: cover;
+}
+
+@include byTablet {
+  .softwareTitle {
+    @include sectionTitleMedium;
+  }
+}
+
+@include byTabletSmall {
+  .softwareTitle {
+    @include sectionTitleSmall;
+  }
+  .designBlock,
+  .sourceBlock {
+    padding: 25px 0 0 25px;
+    max-height: 402px;
+    max-width: 100%;
+  }
+  .designTitle,
+  .sourceTitle {
+    font-size: size.$primary-media-subTitle;
+  }
+  .blockImage {
+    max-height: 100%;
+  }
+  .designSourceBlock {
+    flex-direction: column;
+  }
+}
+
+
+@include toMobileLarge {
+  .softwareTitle {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+  }
+}
+
+@include toSmallTitle {
+  .softwareTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
 }

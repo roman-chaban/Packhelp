@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .people {
   margin-bottom: 184px;
@@ -130,4 +131,63 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+@include byTablet {
+  .peopleTitle {
+    @include sectionTitleMedium;
+  }
+}
+
+@include byTabletSmall {
+  .peopleTitle {
+    @include sectionTitleSmall;
+  }
+  .peopleBannersBlock {
+    flex-direction: column;
+  }
+  .firstBanner,
+  .secondBanner,
+  .thirdBanner {
+    max-width: 100%;
+  }
+  .bannerContainer {
+    max-width: 100%;
+    position: relative;
+  }
+  .bannerImage {
+    position: absolute;
+    max-width: 40%;
+    right: 0;
+  }
+  .secondBannerImage {
+    z-index: 3;
+    max-width: 100%;
+  }
+  .people {
+    margin-bottom: 100px;
+  }
+}
+
+@include toMobile {
+  .thirdBanner {
+    max-height: 240px;
+  }
+  .peopleTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .firstBannerTitle {
+    gap: 45px;
+  }
+  .secondBanner , .thirdBanner {
+    justify-content: space-between;
+    gap: 45px;
+  }
+  .thirdBannerImage {
+    position: relative;
+    bottom: 25px;
+  }
 }

@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .needs {
   margin-bottom: 168px;
@@ -60,14 +61,20 @@
 }
 
 .needCard:nth-child(1) {
+  width: 100%;
+  max-width: 100%;
   background: url(../images/needs/primary.svg) no-repeat center center;
 }
 
 .needCard:nth-child(2) {
+  width: 100%;
+  max-width: 100%;
   background: url(../images/needs/secondary.svg) no-repeat center center;
 }
 
 .needCard:nth-child(3) {
+  width: 100%;
+  max-width: 100%;
   background: url(../images/needs/tertiary.svg) no-repeat center center;
 }
 
@@ -146,4 +153,66 @@
 
 .moreTitleWidth {
   max-width: 130px;
+}
+
+@include byTablet {
+  .needsTitle {
+    @include sectionTitleMedium;
+  }
+
+  .needCard {
+    max-height: 400px;
+  }
+
+  .needCardContainer {
+    padding: 20px;
+  }
+  .needCardTitle {
+    font-size: size.$primary-subMain-size;
+  }
+  .cardSubMark {
+    font-size: size.$primary-subMain-size;
+  }
+}
+
+@include byTabletSmall {
+  .needsTitle {
+    @include sectionTitleSmall;
+  }
+
+  .needsContainer {
+    padding-right: 30px;
+  }
+
+  .needCardTitle,
+  .cardSubMark {
+    font-size: size.$primary-list-item-size;
+  }
+  .needCardButton {
+    padding: 12px 10px;
+  }
+}
+
+@include toMobileLarge {
+  .needsTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .needsCards {
+    flex-direction: column;
+  }
+  .needCard:nth-child(1),
+  .needCard:nth-child(2),
+  .needCard:nth-child(3) {
+    max-width: 81%;
+  }
+}
+
+@include toSmallTitle {
+  .needsTitle {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
 }

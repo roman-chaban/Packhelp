@@ -1,0 +1,35 @@
+@use '../../scss/colors/colors' as color;
+@use '../../scss/abstracts/globals' as size;
+@use '../../scss/abstracts/mixins' as *;
+
+@mixin sectionTitleMedium {
+  font-size: size.$primary-media-title;
+}
+
+@mixin productsTitlesBlockMedium {
+  gap: 18px;
+}
+
+@mixin grayCircleMedium {
+  max-width: 28px;
+  max-height: 28px;
+}
+
+@mixin sectionTitleSmall {
+  font-size: size.$primary-media-title-small;
+}
+
+@mixin sectionSubTitleSmall {
+  font-size: size.$primary-list-item-size;
+}
+
+@mixin grayCircleSmall {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+@mixin toSmallTitle {
+  @media (530px >= width) {
+    @content;
+  }
+}

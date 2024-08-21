@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .footer {
   min-height: 100vh;
@@ -104,12 +105,24 @@
 .footerMenuItems {
   display: flex;
   gap: 137px;
+  @media (630px >= width) {
+    display: grid;
+  }
 }
 
 .primaryMenu {
   display: flex;
   flex-direction: column;
   gap: 23px;
+  @media (600px >= width) {
+    flex-direction: row;
+    gap: 118px;
+  }
+}
+
+.companyAndSecondaryBlock {
+  display: flex;
+  gap: 100px;
 }
 
 .sustainabilityMenu,
@@ -132,6 +145,10 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
+  @media (600px >= width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 #title {
@@ -257,4 +274,110 @@
 .paymentIcon {
   padding: 4px 5px;
   border: 2px solid color.$primary-input-border;
+}
+
+@include byTablet {
+  .footerMenuItems {
+    gap: 60px;
+  }
+  .footerMenu {
+    justify-content: space-between;
+  }
+  .justFoundBlock {
+    max-width: 230px;
+    gap: 15px;
+  }
+  .justFoundBlock > .justFoundTitle {
+    font-size: size.$primary-subMain-size;
+  }
+  .justFoundIcon {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+@include byTabletSmall {
+  .footerMenu {
+    flex-direction: column;
+  }
+  .footerMenuItems {
+    justify-content: space-between;
+  }
+  .copyrightTitles {
+    flex-direction: column;
+    gap: 2px;
+    align-items: start;
+  }
+  .copyrightSubTitle::before {
+    display: none;
+  }
+}
+
+@include toMobileLarge {
+  .paymentIcon {
+    max-width: 32px;
+    max-height: 32px;
+    border-width: 1px;
+  }
+  .socialIconsLogo {
+    flex-direction: column-reverse;
+  }
+  .footerContainer {
+    gap: 35px;
+  }
+  .smallInfoImage {
+    max-height: 90px;
+  }
+  .footerContainer {
+    padding-inline: 15px;
+    padding-block-end: 10px;
+    gap: 20px;
+  }
+  .footerCopyright {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .copyrightTitles {
+    align-items: center;
+  }
+  .paymentSubTitle {
+    max-width: 150px;
+  }
+}
+
+@include toMobile {
+  .companyAndSecondaryBlock,
+  .primaryMenu {
+    max-width: 100%;
+  }
+  .footerMenuItems {
+    max-width: 100%;
+  }
+
+  .footerTopInfoBlock {
+    padding: 30px 0px 25px 0px
+  } 
+
+  .secondaryMenu {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+  }
+  .footerBottomMenu {
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+  .paymentSubTitle {
+    max-width: 100%;
+  }
+  .bottomAddress {
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  .topInfoCardTitle,
+  .topInfoCardSubTitle {
+    font-size: size.$primary-hiring-label;
+  }
 }

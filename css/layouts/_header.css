@@ -99,6 +99,11 @@
   width: 100%;
   max-width: 279px;
 }
+@media (585px >= width) {
+  .headerFeaturesForm {
+    display: none;
+  }
+}
 
 .headerFeatures {
   display: -webkit-box;
@@ -138,4 +143,49 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
+}
+
+@media only screen and (1101px >= width) {
+  .headerContainer {
+    padding: 18px 45px;
+  }
+  .walletIcon,
+  .basketIcon {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+@media only screen and (900px >= width) {
+  .headerNav {
+    display: none;
+  }
+  .navMenuListItem {
+    font-size: 12px;
+  }
+}
+@media only screen and (768px >= width) {
+  .navMenuListItem {
+    padding: 0 10px;
+  }
+  .featuresSignIn {
+    font-weight: 500;
+  }
+}
+@media only screen and (525px >= width) {
+  .headerContainer {
+    padding-inline: 20px;
+  }
+  .headerTopNav {
+    width: 100%;
+    padding-inline: 20px;
+  }
+  .navMenuListItem {
+    font-size: 10px;
+  }
+  .navMenuListItem:nth-child(3) {
+    display: none;
+  }
+  .navMenuListItem:nth-child(2) {
+    border-right: 1px solid #e7e7e7;
+  }
 }

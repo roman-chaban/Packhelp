@@ -1,6 +1,7 @@
 @use '../../scss/colors/colors' as color;
 @use '../../scss/abstracts/globals' as size;
 @use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/media-mixins' as *;
 
 .products {
   display: flex;
@@ -65,6 +66,10 @@
 .mainTitles {
   display: flex;
   align-items: center;
+  @media (410px >= width) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .primarySubtitle {
@@ -104,6 +109,7 @@
 
 .productCard {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -125,4 +131,98 @@
 .secondarySubTitle {
   font-size: size.$primary-subMain-size;
   line-height: 160%;
+}
+
+@include byTablet {
+  .products {
+    margin-bottom: 50px;
+  }
+  .productsTitle {
+    @include sectionTitleMedium;
+  }
+  .productsTitlesBlock {
+    @include productsTitlesBlockMedium;
+  }
+  .grayCircles > .grayCircle {
+    @include grayCircleMedium;
+  }
+  .cardImageBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    max-height: 340px;
+  }
+  .productImage {
+    max-width: 80%;
+  }
+  .toRight {
+    justify-content: flex-end;
+  }
+  .mediumImageSize {
+    max-width: 93%;
+  }
+}
+
+@include byTabletSmall {
+  .productsTitle {
+    @include sectionTitleSmall;
+  }
+  .primarySubtitle {
+    @include sectionSubTitleSmall;
+  }
+  .productsTitlesBlock {
+    gap: 14px;
+  }
+  .grayCircles > .grayCircle {
+    @include grayCircleSmall;
+  }
+  .productCard,
+  .cardImageBlock {
+    max-width: 300px;
+  }
+}
+
+@include toMobileLarge {
+  .productsCards {
+    padding-right: 30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .productCard,
+  .cardImageBlock {
+    max-width: 100%;
+  }
+  .productCard {
+    gap: 25px;
+  }
+  .cardImageBlock {
+    justify-content: start;
+  }
+  .right {
+    position: absolute;
+    right: 31px;
+  }
+  .mediumImageSize {
+    max-width: 37%;
+  }
+  .cardTitle {
+    font-size: size.$primary-subMain-size;
+  }
+}
+
+@include toSmallTitle {
+  #productsTitle {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@include toMobile {
+  .primarySubtitle {
+    font-size: size.$primary-small-title-size;
+  }
+  .productsCards {
+    padding-bottom: 44px;
+  }
 }

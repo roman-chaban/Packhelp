@@ -76,6 +76,9 @@
 .headerFeaturesForm {
   width: 100%;
   max-width: 279px;
+  @media (585px >= width) {
+    display: none;
+  }
 }
 
 .headerFeatures {
@@ -106,4 +109,52 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+@include byTablet {
+  .headerContainer {
+    padding: 18px 45px;
+  }
+  .walletIcon,
+  .basketIcon {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+
+@include byTabletSmall {
+  .headerNav {
+    display: none;
+  }
+  .navMenuListItem {
+    font-size: size.$primary-small-title-size;
+  }
+}
+
+@include toMobileLarge {
+  .navMenuListItem {
+    padding: 0 10px;
+  }
+  .featuresSignIn {
+    font-weight: 500;
+  }
+}
+
+@include toMobile {
+  .headerContainer {
+    padding-inline: 20px;
+  }
+  .headerTopNav {
+    width: 100%;
+    padding-inline: 20px;
+  }
+  .navMenuListItem {
+    font-size: size.$primary-hiring-label;
+  }
+  .navMenuListItem:nth-child(3) {
+    display: none;
+  }
+  .navMenuListItem:nth-child(2) {
+    border-right: 1px solid color.$primary-input-border;
+  }
 }
