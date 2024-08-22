@@ -4,7 +4,31 @@
 
 .header {
   border-bottom: 1px solid color.$primary-input-border;
-  min-height: 70px;
+  height: 100px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  transition: background 0.5s linear 0s;
+}
+
+.active {
+  background: color.$primary-input-border;
+  max-height: 100px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.lightItem {
+  color: color.$primary-natural-white;
+  border-right: 2px solid color.$primary-link-color;
+}
+
+.border-bottom {
+  transition: all 0.5s linear 0s !important;
+  border-bottom: 2px solid color.$primary-link-color !important;
 }
 
 .headerTopNav {
@@ -16,6 +40,15 @@
   display: flex;
   align-items: center;
   height: 40px;
+  transition: color 0.8s linear 0s;
+}
+
+.headerLogoIcon {
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.12);
+  }
 }
 
 .navMenuListItem:not(:first-child) {
@@ -57,6 +90,9 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  @media (1024px >= width) {
+    display: none;
+  }
 }
 
 .menuListItem > .menuListLink,
@@ -64,6 +100,34 @@
   font-size: size.$primary-link-size;
   color: color.$primary-link-color;
   line-height: 171%;
+}
+
+.menuListLink:hover {
+  transition: color 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  color: color.$primary-gray-circle;
+}
+
+.menuListItem {
+  position: relative;
+}
+
+.menuListItem::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 2.5px;
+  border-radius: 2px;
+  background-color: color.$primary-gray-circle;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.menuListItem:hover::after {
+  opacity: 1;
+  width: 100%;
 }
 
 .featuresSignIn {

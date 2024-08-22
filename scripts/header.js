@@ -1,6 +1,44 @@
 'use strict';
 
-const fetchHeaderLinks = async () => {
+
+const header = document.querySelector('.header');
+const navMenuListItems = [...document.querySelectorAll('.headerTopNavMenu > .navMenuListItem')]; 
+const headerTopNavMenu = document.querySelector('.headerTopNav');
+
+
+const updateScrollClasses = () => {
+  if (window.scrollY > 2) {
+    header.classList.add('active');
+    navMenuListItems.forEach(item => {
+      item.classList.add('lightItem');
+    });
+    headerTopNavMenu.classList.add('border-bottom')
+    localStorage.setItem('headerActive', 'true');
+  } else {
+    header.classList.remove('active');
+    navMenuListItems.forEach(item => {
+      item.classList.remove('lightItem');
+    });
+    headerTopNavMenu.classList.remove('border-bottom')
+    localStorage.setItem('headerActive', 'false');
+  }
+}
+
+window.addEventListener('scroll', updateScrollClasses);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const headerActive = localStorage.getItem('headerActive') === 'true';
+  
+  if (headerActive) {
+    header.classList.add('active');
+    navMenuListItems.forEach(item => {
+      item.classList.add('lightItem');
+    });
+  }
+});
+
+
+export const fetchHeaderLinks = async () => {
   try {
     const response = await fetch('./data/header.json');
 
@@ -19,8 +57,6 @@ const fetchHeaderLinks = async () => {
   } catch (error) {
     console.error('Error fetching header links:', error.message);
     return [];
-  } finally {
-    console.log('Links fetching is complete');
   }
 };
 

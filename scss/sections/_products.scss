@@ -121,6 +121,17 @@
   max-width: 304px;
   height: 424px;
   background: color.$primary-hero-background;
+  position: relative;
+}
+
+.productImage {
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(0.9);
+  }
 }
 
 .cardTitle {

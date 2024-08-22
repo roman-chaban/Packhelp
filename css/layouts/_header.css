@@ -1,6 +1,33 @@
 .header {
   border-bottom: 1px solid #e7e7e7;
-  min-height: 70px;
+  height: 100px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  -webkit-transition: background 0.5s linear 0s;
+  transition: background 0.5s linear 0s;
+}
+
+.active {
+  background: #e7e7e7;
+  max-height: 100px;
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.lightItem {
+  color: #fff;
+  border-right: 2px solid #2f2f2f;
+}
+
+.border-bottom {
+  -webkit-transition: all 0.5s linear 0s !important;
+  transition: all 0.5s linear 0s !important;
+  border-bottom: 2px solid #2f2f2f !important;
 }
 
 .headerTopNav {
@@ -16,6 +43,18 @@
       -ms-flex-align: center;
           align-items: center;
   height: 40px;
+  -webkit-transition: color 0.8s linear 0s;
+  transition: color 0.8s linear 0s;
+}
+
+.headerLogoIcon {
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  cursor: pointer;
+}
+.headerLogoIcon:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
 }
 
 .navMenuListItem:not(:first-child) {
@@ -80,12 +119,47 @@
           align-items: center;
   gap: 32px;
 }
+@media (1024px >= width) {
+  .headerNav > .headerNavMenu {
+    display: none;
+  }
+}
 
 .menuListItem > .menuListLink,
 .featuresSignIn {
   font-size: 14px;
   color: #2f2f2f;
   line-height: 171%;
+}
+
+.menuListLink:hover {
+  -webkit-transition: color 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: color 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  color: #c5c5c5;
+}
+
+.menuListItem {
+  position: relative;
+}
+
+.menuListItem::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 0;
+  height: 2.5px;
+  border-radius: 2px;
+  background-color: #c5c5c5;
+  -webkit-transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.menuListItem:hover::after {
+  opacity: 1;
+  width: 100%;
 }
 
 .featuresSignIn {
