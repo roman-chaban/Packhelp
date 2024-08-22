@@ -39,10 +39,14 @@
 
 .designBlock {
   @include defaultBlock(color.$primary-dark-green);
+  flex-grow: 1;
+  max-width: none;
 }
 
 .sourceBlock {
   @include defaultBlock(color.$primary-light);
+  flex-grow: 1;
+  max-width: none;
 }
 
 .designTitle {

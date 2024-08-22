@@ -13,21 +13,8 @@
 }
 
 .active {
-  background: #e7e7e7;
+  background: #f6f8fa;
   max-height: 100px;
-  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-.lightItem {
-  color: #fff;
-  border-right: 2px solid #2f2f2f;
-}
-
-.border-bottom {
-  -webkit-transition: all 0.5s linear 0s !important;
-  transition: all 0.5s linear 0s !important;
-  border-bottom: 2px solid #2f2f2f !important;
 }
 
 .headerTopNav {

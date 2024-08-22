@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
 }
 
 .itemBlock {
@@ -52,6 +53,8 @@
   max-width: 536px;
   height: 592px;
   background: color.$primary-dark-green;
+  flex-grow: 1;
+  max-width: none;
 }
 
 .titlesItemsBlock {

@@ -32,6 +32,8 @@
   width: 100%;
   max-width: 552px;
   background: color.$primary-banner-background;
+  flex-grow: 1;
+  max-width: none;
 }
 
 .bannerContainer {
@@ -52,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 88px;
+  gap: 53px;
   line-height: 133%;
   color: color.$primary-link-color;
   font-size: size.$primary-card-title;
@@ -64,13 +66,67 @@
   object-fit: cover;
 }
 
-[data-button='helloBtn'] {
+.bannerButton {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   background: color.$primary-customize-color;
   padding: 14px 18px;
+  width: 100%;
+  max-width: 100px;
   line-height: 107%;
   border-radius: 2px;
   color: color.$primary-natural-white;
+  border: color.$primary-natural-white solid 0.15em;
+  border-radius: 0.25em;
+  color: color.$primary-natural-white;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  font-size: size.$primary-list-item-size;
 }
+
+.bannerButton::after,
+.bannerButton::before {
+  content: '';
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: color.$primary-natural-white;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.bannerButton::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.bannerButton::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.bannerButton:hover {
+  color: color.$primary-natural-white;
+}
+
+.bannerButton:hover::before {
+  transform: translateX(-1em);
+  color: color.$primary-natural-white;
+}
+
+.bannerButton:hover::after {
+  transform: translateX(1em);
+  color: color.$primary-natural-white;
+}
+
+
 
 .otherBanners {
   width: 100%;
@@ -89,9 +145,12 @@
   max-width: 552px;
   height: 297px;
   background: color.$primary-banner-background;
+  flex-grow: 1;
+  max-width: none;
 }
 
 .thirdBanner {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -101,6 +160,8 @@
   max-width: 552px;
   height: 297px;
   background: color.$primary-banner-background;
+  flex-grow: 1;
+  max-width: none;
 }
 
 .secondTitle {
@@ -131,6 +192,10 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 80%;
 }
 
 @include byTablet {
@@ -191,7 +256,8 @@
   .firstBannerTitle {
     gap: 45px;
   }
-  .secondBanner , .thirdBanner {
+  .secondBanner,
+  .thirdBanner {
     justify-content: space-between;
     gap: 45px;
   }

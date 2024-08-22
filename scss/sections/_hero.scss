@@ -145,9 +145,9 @@
   font-size: size.$primary-customize-size;
   line-height: 139%;
   color: color.$primary-natural-white;
-  transition: background 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  transition: background 0.3s ease-in 0s;
   &:hover {
-    background: color.$primary-dark-green;
+    background: color.$primary-light-gray;
   }
 }
 

@@ -51,6 +51,8 @@
   max-width: 368px;
   height: 226px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  flex-grow: 1;
+  max-width: none;
 }
 
 .cardIcon {

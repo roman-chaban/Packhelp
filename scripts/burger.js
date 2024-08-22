@@ -7,17 +7,28 @@ const toggleBurgerMenu = () => {
     const burgerMenuContent = document.querySelector('.burgerMenuContent');
 
     burgerMenuButton.classList.toggle('active');
-    burgerMenuContent.classList.toggle('show');
+
+    if (burgerMenuContent.classList.contains('show')) {
+        burgerMenuContent.classList.add('hide');
+        setTimeout(() => {
+            burgerMenuContent.classList.remove('show', 'hide');
+        }, 500);
+    } else {
+        burgerMenuContent.classList.add('show');
+    }
 };
 
 const closeBurgerMenu = () => {
     const burgerMenuButton = document.querySelector('.burgerMenuButton');
     const burgerMenuContent = document.querySelector('.burgerMenuContent');
 
-
     burgerMenuButton.classList.remove('active');
-    burgerMenuContent.classList.remove('show');
+    burgerMenuContent.classList.add('hide');
+    setTimeout(() => {
+        burgerMenuContent.classList.remove('show', 'hide');
+    }, 500);
 };
+
 
 const setBurgerMenuLinks = (data) => {
     if (!Array.isArray(data)) {

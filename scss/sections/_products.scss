@@ -125,8 +125,10 @@
 }
 
 .productImage {
+  object-fit: cover;
   position: absolute;
-  left: 0;
+  right: 0;
+  max-width: 100%;
   transition: transform 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
   cursor: pointer;
   &:hover {
@@ -142,6 +144,10 @@
 .secondarySubTitle {
   font-size: size.$primary-subMain-size;
   line-height: 160%;
+}
+
+#right {
+  right: 0;
 }
 
 @include byTablet {
@@ -163,9 +169,6 @@
     align-items: center;
     max-width: 250px;
     max-height: 340px;
-  }
-  .productImage {
-    max-width: 80%;
   }
   .toRight {
     justify-content: flex-end;

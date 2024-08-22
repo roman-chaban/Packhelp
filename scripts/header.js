@@ -4,7 +4,17 @@
 const header = document.querySelector('.header');
 const navMenuListItems = [...document.querySelectorAll('.headerTopNavMenu > .navMenuListItem')]; 
 const headerTopNavMenu = document.querySelector('.headerTopNav');
+const headerLogoImage = document.querySelector('.headerLogo');
 
+
+const handleToUpPage = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+headerLogoImage.addEventListener('click', handleToUpPage);
 
 const updateScrollClasses = () => {
   if (window.scrollY > 2) {
@@ -99,3 +109,4 @@ const initHeaderMenu = async () => {
 };
 
 document.addEventListener('DOMContentLoaded', initHeaderMenu);
+

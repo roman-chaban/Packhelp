@@ -16,19 +16,8 @@
 }
 
 .active {
-  background: color.$primary-input-border;
+  background: color.$primary-banner-background;
   max-height: 100px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-.lightItem {
-  color: color.$primary-natural-white;
-  border-right: 2px solid color.$primary-link-color;
-}
-
-.border-bottom {
-  transition: all 0.5s linear 0s !important;
-  border-bottom: 2px solid color.$primary-link-color !important;
 }
 
 .headerTopNav {
